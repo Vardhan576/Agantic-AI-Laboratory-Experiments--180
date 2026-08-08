@@ -1,0 +1,10 @@
+Q4 Knowledge Base
+=================
+
+Product launch: The Q4 release introduces a new analytics dashboard, improved onboarding, and faster report generation.
+
+Customer feedback: Users report that the new dashboard is intuitive, but some want better export options for PDF reports.
+
+Roadmap: The team plans to improve API integrations, add role-based permissions, and expand multilingual support next quarter.
+
+Support summary: Most issues involve login troubleshooting, billing questions, and delayed onboarding emails.

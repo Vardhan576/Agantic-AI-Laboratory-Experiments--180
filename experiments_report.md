@@ -14,13 +14,13 @@ The experiments are divided into two main environments:
 
 | Experiment | Target File | Core Objective | Primary Technologies | Complexity |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Simple LLM Call** | [q1_llm_workflow.py](q1_llm_workflow.py) | Establish basic connection and zero-shot question answering. | `google-genai` (Gemini 3.5 Flash) | Basic |
-| **02. Prompt Chaining (Basic)** | `q2_prompt_chaining.py` | Sequentially generate a summary, key points, and related questions. | `google-genai` | Basic |
-| **03. Prompt Chaining (Prod)** | [prompt_chaining.py](prompt_chaining.py) | Summarize, extract insights, and synthesize an executive brief with length validations. | `google-genai` | Medium |
-| **04. Agentic AI (Planning)** | `q3_agentic_ai.py` | Implement a Plan-then-Execute pattern where the model designs and executes a checklist. | `google-genai` | Medium |
-| **05. RAG QA (Basic)** | `q4_rag_qa.py` | Basic QA retrieval using paragraph chunks and 1-NN FAISS search on static data. | `sentence-transformers`, `faiss`, `google-genai` | Medium |
-| **06. RAG QA (Prod)** | [rag_qa.py](rag_qa.py) | Context-grounded Q&A on detailed product documentation using 2-NN retrieval and fallback guards. | `sentence-transformers`, `faiss`, `google-genai` | High |
-| **07. Text-to-SQL Engine** | [text_to_sql.py](text_to_sql.py) | Semantic schema retrieval, SQLite generation/execution, and natural language response synthesis. | `sentence-transformers`, `faiss`, `sqlite3`, `google-genai` | High |
+| **01. Simple LLM Call** | [q1_llm_workflow.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/q1_llm_workflow.py) | Establish basic connection and zero-shot question answering. | `google-genai` (Gemini 3.5 Flash) | Basic |
+| **02. Prompt Chaining (Basic)** | [q2_prompt_chaining.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/agentic%20ai/llm_assignments/q2_prompt_chaining.py) | Sequentially generate a summary, key points, and related questions. | `google-genai` | Basic |
+| **03. Prompt Chaining (Prod)** | [prompt_chaining.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/prompt_chaining.py) | Summarize, extract insights, and synthesize an executive brief with length validations. | `google-genai` | Medium |
+| **04. Agentic AI (Planning)** | [q3_agentic_ai.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/agentic%20ai/llm_assignments/q3_agentic_ai.py) | Implement a Plan-then-Execute pattern where the model designs and executes a checklist. | `google-genai` | Medium |
+| **05. RAG QA (Basic)** | [q4_rag_qa.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/agentic%20ai/llm_assignments/q4_rag_qa.py) | Basic QA retrieval using paragraph chunks and 1-NN FAISS search on static data. | `sentence-transformers`, `faiss`, `google-genai` | Medium |
+| **06. RAG QA (Prod)** | [rag_qa.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/rag_qa.py) | Context-grounded Q&A on detailed product documentation using 2-NN retrieval and fallback guards. | `sentence-transformers`, `faiss`, `google-genai` | High |
+| **07. Text-to-SQL Engine** | [text_to_sql.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/text_to_sql.py) | Semantic schema retrieval, SQLite generation/execution, and natural language response synthesis. | `sentence-transformers`, `faiss`, `sqlite3`, `google-genai` | High |
 
 ---
 
@@ -158,25 +158,3 @@ python setup_db.py
    ```bash
    python text_to_sql.py
    ```
-
----
-
-## 6. Verified Outputs (Screenshots)
-
-Below are the console outputs of each workflow, captured programmatically upon execution:
-
-### 1. Database Initialization (`setup_db.py`)
-![Database Initialization](screenshot_q1_db_setup.png)
-
-### 2. Simple LLM Call (`q1_llm_workflow.py`)
-![LLM Call Output](screenshot_q2_llm_workflow.png)
-
-### 3. Prompt Chaining Summarization (`prompt_chaining.py`)
-![Prompt Chaining Output](screenshot_q3_prompt_chaining.png)
-
-### 4. RAG QA Assistant (`rag_qa.py`)
-![RAG QA Output](screenshot_q4_rag_qa.png)
-
-### 5. Text-to-SQL Query Engine (`text_to_sql.py`)
-![Text-to-SQL Output](screenshot_q5_text_to_sql.png)
-
