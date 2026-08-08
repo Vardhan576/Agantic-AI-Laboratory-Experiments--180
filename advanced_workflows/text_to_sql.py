@@ -6,8 +6,14 @@ from sentence_transformers import SentenceTransformer
 from google import genai
 
 # Setup Gemini Client
-# We check for a set environment variable or fall back to the project default key
-api_key = os.environ.get("GEMINI_API_KEY") or "AQ.Ab8RN6KjqSW6dV56BW2aMsfa8dE8Yp8J9v1x7ooqUeUsqF1KOg"
+# We check for a set environment variable. API key must be set before running.
+api_key = os.environ.get("GEMINI_API_KEY")
+if not api_key:
+    raise ValueError(
+        "GEMINI_API_KEY environment variable is not set. "
+        "Please set your API key before running this script:\n"
+        "  export GEMINI_API_KEY='your-actual-api-key'"
+    )
 client = genai.Client(api_key=api_key)
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "ecommerce.db")
@@ -28,7 +34,7 @@ schema_items = [
     },
     {
         "table": "products",
-        "description": "Store product catalog details including product name, category, price, and stock levels. Use this for queries about product lists, prices, categories, inventory levels, or looking up product IDs.",
+        "description": "Store product catalog details including product name, category, price, and stock levels. Use this for queries about product lists, prices, categories, inventory levels, or lookups.",
         "ddl": """CREATE TABLE products (
     product_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
@@ -39,7 +45,7 @@ schema_items = [
     },
     {
         "table": "orders",
-        "description": "Store transaction details, orders, purchase date, quantities ordered, and total transaction amounts. Connects customers to products. Use this for queries about sales revenue, order history, purchase volume, quantity sold, or transactions.",
+        "description": "Store transaction details, orders, purchase date, quantities ordered, and total transaction amounts. Connects customers to products. Use this for queries about sales revenue, order history, or customer purchases.",
         "ddl": """CREATE TABLE orders (
     order_id INTEGER PRIMARY KEY AUTOINCREMENT,
     customer_id INTEGER NOT NULL,
@@ -101,7 +107,7 @@ SQL Query:
 """
     
     response = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-2.0-flash",
         contents=prompt
     )
     
@@ -147,7 +153,7 @@ Explain what went wrong in a user-friendly way.
     else:
         results_str = f"Columns: {columns}\nRows:\n" + "\n".join([str(row) for row in rows])
         prompt = f"""
-You are a helpful customer support and data analysis assistant. Given the user question, the SQL query executed, and the query results, synthesize a friendly, clear, and direct natural language answer for the user. Do not explain the SQL query itself, just answer the question based on the results.
+You are a helpful customer support and data analysis assistant. Given the user question, the SQL query executed, and the query results, synthesize a friendly, clear, and direct natural language answer.
 
 User Question: {query}
 SQL Query: {sql}
@@ -158,7 +164,7 @@ Answer:
 """
 
     response = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-2.0-flash",
         contents=prompt
     )
     return response.text.strip()
