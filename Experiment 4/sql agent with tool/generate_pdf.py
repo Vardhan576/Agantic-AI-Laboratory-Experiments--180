@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 from sql_agent import run_agent
 
 # Paths
-WORKSPACE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+WORKSPACE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 LOGO_PATH = os.path.join(WORKSPACE_DIR, "mru_logo.png")
 PDF_PATH = os.path.join(WORKSPACE_DIR, "sql_agent_experiment.pdf")
 

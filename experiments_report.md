@@ -16,12 +16,13 @@ The experiments are divided into two main environments:
 | :--- | :--- | :--- | :--- | :--- |
 | **01. Simple LLM Call** | [q1_llm_workflow.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/q1_llm_workflow.py) | Establish basic connection and zero-shot question answering. | `google-genai` (Gemini 3.5 Flash) | Basic |
 | **02. Prompt Chaining (Basic)** | [q2_prompt_chaining.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/agentic%20ai/llm_assignments/q2_prompt_chaining.py) | Sequentially generate a summary, key points, and related questions. | `google-genai` | Basic |
-| **03. Prompt Chaining (Prod)** | [prompt_chaining.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/prompt%20chaining%20for%20summarization/prompt_chaining.py) | Summarize, extract insights, and synthesize an executive brief with length validations. | `google-genai` | Medium |
+| **03. Prompt Chaining (Prod)** | [prompt_chaining.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/Experiment%203/prompt%20chaining%20for%20summarization/prompt_chaining.py) | Summarize, extract insights, and synthesize an executive brief with length validations. | `google-genai` | Medium |
 | **04. Agentic AI (Planning)** | [q3_agentic_ai.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/agentic%20ai/llm_assignments/q3_agentic_ai.py) | Implement a Plan-then-Execute pattern where the model designs and executes a checklist. | `google-genai` | Medium |
 | **05. RAG QA (Basic)** | [q4_rag_qa.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/agentic%20ai/llm_assignments/q4_rag_qa.py) | Basic QA retrieval using paragraph chunks and 1-NN FAISS search on static data. | `sentence-transformers`, `faiss`, `google-genai` | Medium |
-| **06. RAG QA (Prod)** | [rag_qa.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/rag-based%20qa%20system/rag_qa.py) | Context-grounded Q&A on detailed product documentation using 2-NN retrieval and fallback guards. | `sentence-transformers`, `faiss`, `google-genai` | High |
-| **07. Text-to-SQL Engine** | [text_to_sql.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/text%20to%20sql%20workflow/text_to_sql.py) | Semantic schema retrieval, SQLite generation/execution, and natural language response synthesis. | `sentence-transformers`, `faiss`, `sqlite3`, `google-genai` | High |
-| **08. SQL Agent with Tool Use** | [sql_agent.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/sql%20agent%20with%20tool/sql_agent.py) | ReAct reasoning loop utilizing database tools to dynamically fetch schemas and query SQLite. | `sqlite3`, `google-genai` | High |
+| **06. RAG QA (Prod)** | [rag_qa.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/Experiment%202/rag-based%20qa%20system/rag_qa.py) | Context-grounded Q&A on detailed product documentation using 2-NN retrieval and fallback guards. | `sentence-transformers`, `faiss`, `google-genai` | High |
+| **07. Text-to-SQL Engine** | [text_to_sql.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/Experiment%201/text%20to%20sql%20workflow/text_to_sql.py) | Semantic schema retrieval, SQLite generation/execution, and natural language response synthesis. | `sentence-transformers`, `faiss`, `sqlite3`, `google-genai` | High |
+| **08. SQL Agent with Tool Use** | [sql_agent.py](file:///c:/Users/D.Megha%20vardhan/OneDrive/Desktop/advanced_workflows/Experiment%204/sql%20agent%20with%20tool/sql_agent.py) | ReAct reasoning loop utilizing database tools to dynamically fetch schemas and query SQLite. | `sqlite3`, `google-genai` | High |
+
 
 
 
@@ -151,19 +152,20 @@ python setup_db.py
 ### Running the Workflows
 1. **To run the advanced summarization pipeline**:
    ```bash
-   python "prompt chaining for summarization/prompt_chaining.py"
+   python "Experiment 3/prompt chaining for summarization/prompt_chaining.py"
    ```
 2. **To run the grounded QA assistant**:
    ```bash
-   python "rag-based qa system/rag_qa.py"
+   python "Experiment 2/rag-based qa system/rag_qa.py"
    ```
 3. **To query the database using natural language**:
    ```bash
-   python "text to sql workflow/text_to_sql.py"
+   python "Experiment 1/text to sql workflow/text_to_sql.py"
    ```
 4. **To run the ReAct-based SQL Agent & generate the PDF report**:
    ```bash
-   python "sql agent with tool/generate_pdf.py"
+   python "Experiment 4/sql agent with tool/generate_pdf.py"
    ```
+
 
 

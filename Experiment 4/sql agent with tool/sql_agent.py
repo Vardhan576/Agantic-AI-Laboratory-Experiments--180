@@ -9,7 +9,7 @@ api_key = os.environ.get("GEMINI_API_KEY") or "AQ.Ab8RN6KjqSW6dV56BW2aMsfa8dE8Yp
 client = genai.Client(api_key=api_key)
 
 # Database path (located in the parent directory)
-DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "ecommerce.db"))
+DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "ecommerce.db"))
 
 def list_tables():
     """Tool: Lists all tables in the database."""

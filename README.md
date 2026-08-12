@@ -172,11 +172,11 @@ Below are the console outputs of each workflow, captured programmatically upon e
 ![LLM Call Output](screenshot_q2_llm_workflow.png)
 
 ### 3. Prompt Chaining Summarization (`prompt_chaining.py`)
-![Prompt Chaining Output](screenshot_q3_prompt_chaining.png)
+![Prompt Chaining Output](Experiment%203/prompt%20chaining%20for%20summarization/screenshot_q3_prompt_chaining.png)
 
 ### 4. RAG QA Assistant (`rag_qa.py`)
-![RAG QA Output](screenshot_q4_rag_qa.png)
+![RAG QA Output](Experiment%202/rag-based%20qa%20system/screenshot_q4_rag_qa.png)
 
 ### 5. Text-to-SQL Query Engine (`text_to_sql.py`)
-![Text-to-SQL Output](screenshot_q5_text_to_sql.png)
+![Text-to-SQL Output](Experiment%201/text%20to%20sql%20workflow/screenshot_q5_text_to_sql.png)
 

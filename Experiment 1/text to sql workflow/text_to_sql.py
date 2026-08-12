@@ -9,7 +9,7 @@ from google import genai
 api_key = os.environ.get("GEMINI_API_KEY") or "AQ.Ab8RN6KjqSW6dV56BW2aMsfa8dE8Yp8J9v1x7ooqUeUsqF1KOg"
 client = genai.Client(api_key=api_key)
 
-DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "ecommerce.db"))
+DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "ecommerce.db"))
 
 # Define schema metadata for retrieval
 schema_items = [
