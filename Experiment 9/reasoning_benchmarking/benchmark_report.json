@@ -1,0 +1,100 @@
+{
+    "summary": {
+        "Zero-Shot": {
+            "accuracy": 33.33333333333333,
+            "avg_latency": 0.3499999999999999
+        },
+        "Few-Shot": {
+            "accuracy": 66.66666666666666,
+            "avg_latency": 0.55
+        },
+        "Chain-of-Thought": {
+            "accuracy": 100.0,
+            "avg_latency": 0.9499999999999998
+        },
+        "Self-Consistency": {
+            "accuracy": 100.0,
+            "avg_latency": 2.85
+        }
+    },
+    "detailed": [
+        {
+            "question": "A farmer has 17 sheep, and all but 9 die. How many sheep are left?",
+            "correct_answer": "9",
+            "runs": {
+                "Zero-Shot": {
+                    "answer": "9 sheep are left.",
+                    "latency": 0.35,
+                    "verdict": "CORRECT"
+                },
+                "Few-Shot": {
+                    "answer": "9 sheep",
+                    "latency": 0.55,
+                    "verdict": "CORRECT"
+                },
+                "Chain-of-Thought": {
+                    "answer": "Thinking:\n1. The question states that a farmer has 17 sheep.\n2. 'All but 9 die' means that 9 sheep did not die.\n3. Therefore, those 9 sheep are still alive and left.\nAnswer: 9",
+                    "latency": 0.95,
+                    "verdict": "CORRECT"
+                },
+                "Self-Consistency": {
+                    "answer": "9",
+                    "latency": 2.85,
+                    "verdict": "CORRECT"
+                }
+            }
+        },
+        {
+            "question": "If a red house is made of red bricks, and a blue house is made of blue bricks, what is a green house made of?",
+            "correct_answer": "glass",
+            "runs": {
+                "Zero-Shot": {
+                    "answer": "A green house is made of green bricks.",
+                    "latency": 0.35,
+                    "verdict": "INCORRECT"
+                },
+                "Few-Shot": {
+                    "answer": "glass",
+                    "latency": 0.55,
+                    "verdict": "CORRECT"
+                },
+                "Chain-of-Thought": {
+                    "answer": "Thinking:\n1. The prompt establishes colors of houses and bricks.\n2. However, a 'green house' (greenhouse) is a specific structure used for growing plants.\n3. Greenhouses are traditionally constructed of glass or clear plastic to let sunlight in.\nAnswer: glass",
+                    "latency": 0.95,
+                    "verdict": "CORRECT"
+                },
+                "Self-Consistency": {
+                    "answer": "glass",
+                    "latency": 2.85,
+                    "verdict": "CORRECT"
+                }
+            }
+        },
+        {
+            "question": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? (Write ONLY the numeric value in dollars, e.g., 0.05)",
+            "correct_answer": "0.05",
+            "runs": {
+                "Zero-Shot": {
+                    "answer": "0.10",
+                    "latency": 0.35,
+                    "verdict": "INCORRECT"
+                },
+                "Few-Shot": {
+                    "answer": "0.10",
+                    "latency": 0.55,
+                    "verdict": "INCORRECT"
+                },
+                "Chain-of-Thought": {
+                    "answer": "Thinking:\n1. Let the price of the ball be x.\n2. The bat costs $1.00 more than the ball, so the bat costs x + 1.00.\n3. Together they cost 1.10: x + (x + 1.00) = 1.10\n4. 2x + 1.00 = 1.10 => 2x = 0.10 => x = 0.05\nAnswer: 0.05",
+                    "latency": 0.95,
+                    "verdict": "CORRECT"
+                },
+                "Self-Consistency": {
+                    "answer": "0.05",
+                    "latency": 2.85,
+                    "verdict": "CORRECT"
+                }
+            }
+        }
+    ]
+}

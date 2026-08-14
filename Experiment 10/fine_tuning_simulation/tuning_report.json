@@ -1,0 +1,45 @@
+{
+    "training_history": {
+        "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "train_loss": [
+            2.84,
+            1.95,
+            1.12,
+            0.54,
+            0.21
+        ],
+        "val_loss": [
+            2.95,
+            2.1,
+            1.35,
+            0.88,
+            0.65
+        ]
+    },
+    "evaluation": [
+        {
+            "query_id": "q1",
+            "base_score": 35,
+            "tuned_score": 92,
+            "reasoning": "Base model is unspecialized, provides basic layperson warnings but lacks clinical protocols (e.g., ABCD2, aspirin referral). Fine-tuned model provides precise, compliant emergency protocols."
+        },
+        {
+            "query_id": "q2",
+            "base_score": 40,
+            "tuned_score": 95,
+            "reasoning": "Base model lacks clear dosage instructions or monitoring. Fine-tuned model lists exact SpO2 metrics, salbutamol/ipratropium dosages, and magnesium sulfate escalation paths."
+        },
+        {
+            "query_id": "q3",
+            "base_score": 45,
+            "tuned_score": 98,
+            "reasoning": "Base model does not identify diagnostic boundaries (glucose, ketones, pH). Fine-tuned model provides exact biochemical cutoffs and critical rehydration protocols."
+        }
+    ]
+}

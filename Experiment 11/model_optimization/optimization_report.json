@@ -1,0 +1,15 @@
+{
+    "quantization": {
+        "original_size": 1000000,
+        "quantized_size": 250000,
+        "compression_ratio": 4.0,
+        "reconstruction_mse": 2.6122614144696854e-05
+    },
+    "distillation": {
+        "teacher_mse": 2436.6350112300233,
+        "student_hard_mse": 8142.8485085822,
+        "student_soft_mse": 8123.331767410622,
+        "teacher_nodes": 99622,
+        "student_nodes": 15
+    }
+}

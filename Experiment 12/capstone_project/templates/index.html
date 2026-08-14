@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX: Enterprise Support Portal</title>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="logo-badge">APEX</span>
+                <h1>Enterprise Support Portal</h1>
+            </div>
+            <div class="system-status">
+                <span class="status-dot online"></span>
+                <span class="status-text">Relational DB & RAG Online</span>
+            </div>
+        </header>
+
+        <!-- Metrics Dashboard -->
+        <section class="dashboard-metrics">
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>Total Customers</h3>
+                    <p id="metric-customers">0</p>
+                </div>
+                <div class="metric-icon">👤</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>Products In Catalog</h3>
+                    <p id="metric-products">0</p>
+                </div>
+                <div class="metric-icon">📦</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>Orders Handled</h3>
+                    <p id="metric-orders">0</p>
+                </div>
+                <div class="metric-icon">🛒</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>Total Revenue</h3>
+                    <p id="metric-revenue">$0.00</p>
+                </div>
+                <div class="metric-icon">💳</div>
+            </div>
+        </section>
+
+        <!-- Main Workspace -->
+        <main class="workspace-layout">
+            <!-- Left Pane: Chat Workspace -->
+            <section class="chat-section glass-panel">
+                <div class="panel-header">
+                    <h2>Customer Support Agent</h2>
+                    <span class="agent-mode">Active Agent: Multi-Agent Supervisor</span>
+                </div>
+                
+                <div class="chat-history" id="chat-history-box">
+                    <div class="message system-message">
+                        <div class="avatar">🤖</div>
+                        <div class="message-content">
+                            <p>Hello! I am the APEX enterprise operations agent. I can look up order statuses, count products, calculate sales revenue from our SQLite database, or answer corporate policy questions using Retrieval-Augmented Generation (RAG). How can I assist you today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-bar">
+                    <input type="text" id="chat-input-field" placeholder="Ask about orders, sales totals, or company refund policy..." autocomplete="off">
+                    <button id="chat-send-btn">Send</button>
+                </div>
+            </section>
+
+            <!-- Right Pane: Reasoning Trace Log -->
+            <section class="trace-section glass-panel">
+                <div class="panel-header">
+                    <h2>Agent Reasoning & Trace Logs</h2>
+                    <button class="clear-btn" id="clear-trace-btn">Clear Logs</button>
+                </div>
+                <div class="trace-logs" id="trace-logs-box">
+                    <div class="trace-placeholder">
+                        <p>Waiting for query execution... Trace thoughts, SQL commands, and RAG contexts will appear here in real-time.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

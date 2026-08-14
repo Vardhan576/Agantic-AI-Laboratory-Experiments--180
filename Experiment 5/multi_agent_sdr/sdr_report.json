@@ -1,0 +1,56 @@
+[
+    {
+        "lead_info": {
+            "company_name": "Acme Talent Solutions",
+            "industry": "Recruitment & HR Tech",
+            "company_size": 120,
+            "contact_name": "Sarah Jenkins",
+            "contact_email": "sarah.jenkins@acmetalent.com",
+            "company_description": "Provides outsourced recruitment services to mid-market tech firms.",
+            "pain_point": "Struggling to scale candidate matching processes, leading to long placement cycles.",
+            "qualification_score": 85,
+            "status": "QUALIFIED",
+            "reasons": [
+                "Company size meets ICP minimum of 50.",
+                "Stated pain point matches core automation capabilities."
+            ]
+        },
+        "outreach_email": "Subject: Improving operational scalability at Acme Talent Solutions\n\nHi Sarah Jenkins,\n\nI noticed that Acme Talent Solutions is currently expanding its footprint in the Recruitment & HR Tech sector. Given your focus on operational efficiency, I wanted to reach out regarding your current process bottlenecks around struggling to scale candidate matching processes, leading to long placement cycles..\n\nOur agentic AI workflows are built precisely to automate these manual workflows, reducing cycle times by up to 80%.\n\nWould you be open to a brief, 10-minute introductory call next Tuesday to discuss how we might help?\n\nBest regards,\nAPEX Operations Team"
+    },
+    {
+        "lead_info": {
+            "company_name": "LogiCorp Global",
+            "industry": "Supply Chain & Logistics",
+            "company_size": 450,
+            "contact_name": "Marcus Vance",
+            "contact_email": "m.vance@logicorp.com",
+            "company_description": "Manages international freight forwarding and warehousing solutions.",
+            "pain_point": "Manual reporting of shipment statuses causes communication delays with premium clients.",
+            "qualification_score": 85,
+            "status": "QUALIFIED",
+            "reasons": [
+                "Company size meets ICP minimum of 50.",
+                "Stated pain point matches core automation capabilities."
+            ]
+        },
+        "outreach_email": "Subject: Improving operational scalability at LogiCorp Global\n\nHi Marcus Vance,\n\nI noticed that LogiCorp Global is currently expanding its footprint in the Supply Chain & Logistics sector. Given your focus on operational efficiency, I wanted to reach out regarding your current process bottlenecks around manual reporting of shipment statuses causes communication delays with premium clients..\n\nOur agentic AI workflows are built precisely to automate these manual workflows, reducing cycle times by up to 80%.\n\nWould you be open to a brief, 10-minute introductory call next Tuesday to discuss how we might help?\n\nBest regards,\nAPEX Operations Team"
+    },
+    {
+        "lead_info": {
+            "company_name": "EduStream Academy",
+            "industry": "EdTech",
+            "company_size": 35,
+            "contact_name": "Dr. Elena Rostova",
+            "contact_email": "elena@edustream.org",
+            "company_description": "Online learning platform specializing in K-12 interactive STEM curriculum.",
+            "pain_point": "High student churn rates due to lack of personalized learning path recommendations.",
+            "qualification_score": 45,
+            "status": "DISQUALIFIED",
+            "reasons": [
+                "Company size is below the 50 employees threshold.",
+                "Higher churn risk for micro-businesses."
+            ]
+        },
+        "outreach_email": ""
+    }
+]

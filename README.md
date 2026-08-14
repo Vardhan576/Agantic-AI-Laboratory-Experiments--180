@@ -21,6 +21,15 @@ The experiments are divided into two main environments:
 | **05. RAG QA (Basic)** | `q4_rag_qa.py` | Basic QA retrieval using paragraph chunks and 1-NN FAISS search on static data. | `sentence-transformers`, `faiss`, `google-genai` | Medium |
 | **06. RAG QA (Prod)** | [rag_qa.py](rag_qa.py) | Context-grounded Q&A on detailed product documentation using 2-NN retrieval and fallback guards. | `sentence-transformers`, `faiss`, `google-genai` | High |
 | **07. Text-to-SQL Engine** | [text_to_sql.py](text_to_sql.py) | Semantic schema retrieval, SQLite generation/execution, and natural language response synthesis. | `sentence-transformers`, `faiss`, `sqlite3`, `google-genai` | High |
+| **08. SQL Agent with Tool Use** | `Experiment 4/sql agent with tool/sql_agent.py` | ReAct reasoning loop utilizing database tools to dynamically fetch schemas and query SQLite. | `sqlite3`, `google-genai` | High |
+| **09. Multi-Agent SDR System** | `Experiment 5/multi_agent_sdr/sdr_system.py` | Lead generation, automated qualification against ICP, and custom B2B cold emailing. | `google-genai` | High |
+| **10. Policy Compliance Agent** | `Experiment 6/policy_compliance/compliance_agent.py` | Rule-based and semantic LLM audit checks of agent conversation logs for safety compliance. | `google-genai` | High |
+| **11. Deep Research Agent Workflow** | `Experiment 7/deep_research_agent/research_workflow.py` | Planning, drafting, self-reflection critique, and iterative refinement agent loop. | `google-genai` | High |
+| **12. Multimodal Retrieval & VQA** | `Experiment 8/image_retrieval_vqa/multimodal_pipeline.py` | Dynamic PIL image generator, multimodal image caption indexing, and visual QA pipeline. | `google-genai`, `pillow` | High |
+| **13. Reasoning Benchmarking** | `Experiment 9/reasoning_benchmarking/benchmarking.py` | Compare Zero-Shot, Few-Shot, CoT, and Self-Consistency prompting accuracy/latency. | `google-genai`, `matplotlib` | High |
+| **14. Fine-Tuning Simulation** | `Experiment 10/fine_tuning_simulation/fine_tuning_experiment.py` | Instruction data prep (JSONL formatting), training loss curve plotting, base vs tuned evaluation. | `google-genai`, `matplotlib` | High |
+| **15. Model Optimization** | `Experiment 11/model_optimization/optimization_experiment.py` | Post-training weight quantization (FP32 to INT8) and student-teacher knowledge distillation. | `scikit-learn`, `matplotlib` | High |
+| **16. Capstone Project** | `Experiment 12/capstone_project/main.py` | End-to-end Enterprise Support System combining SQLite query tool, RAG, safety checker, and FastAPI dashboard. | `fastapi`, `google-genai` | High |
 
 ---
 
@@ -156,8 +165,44 @@ python setup_db.py
    ```
 3. **To query the database using natural language**:
    ```bash
-   python text_to_sql.py
+   python "Experiment 1/text to sql workflow/text_to_sql.py"
    ```
+4. **To run the ReAct-based SQL Agent & generate the PDF report**:
+   ```bash
+   python "Experiment 4/sql agent with tool/generate_pdf.py"
+   ```
+5. **To run the multi-agent SDR system**:
+   ```bash
+   python "Experiment 5/multi_agent_sdr/sdr_system.py"
+   ```
+6. **To run the policy compliance evaluator**:
+   ```bash
+   python "Experiment 6/policy_compliance/compliance_agent.py"
+   ```
+7. **To run the deep research agent workflow**:
+   ```bash
+   python "Experiment 7/deep_research_agent/research_workflow.py"
+   ```
+8. **To run the multimodal image retrieval & VQA pipeline**:
+   ```bash
+   python "Experiment 8/image_retrieval_vqa/multimodal_pipeline.py"
+   ```
+9. **To run the reasoning model prompting benchmarking**:
+   ```bash
+   python "Experiment 9/reasoning_benchmarking/benchmarking.py"
+   ```
+10. **To run the fine-tuning domain adaptation simulator**:
+    ```bash
+    python "Experiment 10/fine_tuning_simulation/fine_tuning_experiment.py"
+    ```
+11. **To run the model optimization (quantization + distillation) experiment**:
+    ```bash
+    python "Experiment 11/model_optimization/optimization_experiment.py"
+    ```
+12. **To launch the FastAPI Capstone Dev Server**:
+    ```bash
+    python "Experiment 12/capstone_project/run_capstone.py"
+    ```
 
 ---
 
