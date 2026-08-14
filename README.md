@@ -225,3 +225,31 @@ Below are the console outputs of each workflow, captured programmatically upon e
 ### 5. Text-to-SQL Query Engine (`text_to_sql.py`)
 ![Text-to-SQL Output](Experiment%201/text%20to%20sql%20workflow/screenshot_q5_text_to_sql.png)
 
+### 6. Multi-Agent SDR System (`sdr_system.py`)
+![SDR Output](Experiment%205/multi_agent_sdr/screenshot_sdr_system.png)
+
+### 7. Policy Compliance Agent (`compliance_agent.py`)
+![Compliance Output](Experiment%206/policy_compliance/screenshot_compliance_agent.png)
+
+### 8. Deep Research Agent Workflow (`research_workflow.py`)
+![Research Output](Experiment%207/deep_research_agent/screenshot_research_workflow.png)
+
+### 9. Multimodal Retrieval & VQA (`multimodal_pipeline.py`)
+![Multimodal Output](Experiment%208/image_retrieval_vqa/screenshot_multimodal_pipeline.png)
+
+### 10. Reasoning Model Benchmarking (`benchmarking.py`)
+![Benchmarking Output](Experiment%209/reasoning_benchmarking/screenshot_benchmarking.png)
+![Benchmarking Chart](Experiment%209/reasoning_benchmarking/benchmark_chart.png)
+
+### 11. Fine-Tuning Simulation (`fine_tuning_experiment.py`)
+![Fine-Tuning Output](Experiment%2010/fine_tuning_simulation/screenshot_fine_tuning_experiment.png)
+![Fine-Tuning Chart](Experiment%2010/fine_tuning_simulation/fine_tuning_chart.png)
+
+### 12. Model Optimization Experiment (`optimization_experiment.py`)
+![Optimization Output](Experiment%2011/model_optimization/screenshot_optimization_experiment.png)
+![Optimization Chart](Experiment%2011/model_optimization/optimization_chart.png)
+
+### 13. Capstone Project Portal (`main.py`)
+![Capstone Portal Output](screenshot_capstone_portal.png)
+
+
